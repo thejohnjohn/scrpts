@@ -1,5 +1,5 @@
 apt list --upgradable | awk -F "/" '
 {
-    if ($1 != "Listing..." && $1 != "WARNING: apt does not have a stable CLI interface. Use with caution in scripts.") 
+    if ($1 != "Listing...") 
         print $1
 }' | apt upgrade -y
