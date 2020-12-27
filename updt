@@ -1,5 +1,0 @@
-apt list --upgradable | awk -F "/" '
-{
-    if ($1 != "Listing...") 
-        print $1
-}' | apt upgrade -y
